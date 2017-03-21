@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 # from pyvirtualdisplay import Display
 from easyprocess import EasyProcess
 import time
+import re
 
 from utils import *
 
@@ -65,6 +66,12 @@ class Erya(object):
         if aha:
             with open('./CAPTCHA.txt') as f:
                 CAPTCHA = f.read()
+            print(CAPTCHA)
+            print(len(CAPTCHA))
+            try:
+                re.match(r'\d{4}', CAPTCHA)
+            except:
+                return False
             numcode = self.driver.find_element_by_id('numcode')
             numcode.clear()
             numcode.send_keys(CAPTCHA)
@@ -160,7 +167,7 @@ class Erya(object):
 
 if __name__ == '__main__':
     userID = 140269014
-    pwd = 'X'
+    pwd = 'd19960415d'
     begin_id = 'cur86883496'
     end_id = 'cur86883558'
 
