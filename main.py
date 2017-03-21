@@ -3,9 +3,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from pyvirtualdisplay import Display
+# from pyvirtualdisplay import Display
 from easyprocess import EasyProcess
-from random_str import *
 import time
 
 from utils import *
@@ -17,13 +16,14 @@ class Erya(object):
 
     def __init__(self, userID=None, pwd=None, id=None, end_id=None):
         if not userID or not pwd:
-            print('No information')
+            print('No username and password.Check it at the bottom')
+            exit()
         self.__userID = userID
         self.__pwd = pwd
         self.id = id
         self.end_id = end_id
         self.driver = webdriver.Firefox()
-        # 不支持PhantomJS,其他浏览器未测试
+        # no support for PhantomJS
         # self.driver = webdriver.PhantomJS()
         self.wait = WebDriverWait(self.driver, 30)
 
@@ -159,8 +159,8 @@ class Erya(object):
         pass
 
 if __name__ == '__main__':
-    userID = 15262057000
-    pwd = ''
+    userID = 140269014
+    pwd = 'X'
     begin_id = 'cur86883496'
     end_id = 'cur86883558'
 

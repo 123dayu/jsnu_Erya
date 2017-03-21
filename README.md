@@ -1,19 +1,22 @@
 # erya
-[登录界面](http://passport2.chaoxing.com/login?fid=1479&refer=http://i.mooc.chaoxing.com)
+[Login page](http://passport2.chaoxing.com/login?fid=1479&refer=http://i.mooc.chaoxing.com)
 
 ### demo
 ![](http://ob9j09f06.bkt.clouddn.com/2016-08-25-demo.gif)
 
 ### install
+* geckodriver
+> brew install geckodriver
+
 * Tesseract or not
     [Tesseract](https://github.com/tesseract-ocr/tesseract):
     是一个开源的OCR（Optical Character Recognition，光学字符识别）引擎，可以识别多种格式的图像文件并将其转换成文本。```识别验证码```
 
-* python2.7
+* pip install -r requirements.txt
 
 ### 注册并配置个人信息
 ```python
-userID = 152620xxxxx
+userID = 140269014
 pwd = xx
 begin_id = 'cur86883496'
 end_id = 'cur86883558'
